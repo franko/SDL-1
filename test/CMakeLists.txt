@@ -14,6 +14,7 @@ if(WINDOWS)
 endif()
 
 add_executable(checkkeys checkkeys.c)
+add_executable(checkkeysthreads checkkeysthreads.c)
 add_executable(loopwave loopwave.c)
 add_executable(loopwavequeue loopwavequeue.c)
 add_executable(testresample testresample.c)

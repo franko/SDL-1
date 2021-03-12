@@ -186,6 +186,8 @@ typedef struct SDL_VideoData
     DWORD ime_convmodesinkcookie;
     TSFSink *ime_uielemsink;
     TSFSink *ime_ippasink;
+
+    UINT _SDL_WAKEUP;
 } SDL_VideoData;
 
 extern SDL_bool g_WindowsEnableMessageLoop;
