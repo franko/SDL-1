@@ -1,3 +1,11 @@
+# Simple DirectMedia Layer (SDL) for Desktop Applications
+
+Fork of the SDL library including improvements for desktop applications.
+
+Includes the following improvements:
+
+- reduce CPU usage to zero when waiting for events (SDL_WaitEvent / WaitEventTimeout)
+- fix problem with text copy & paste with X11 video backend
 
 # Simple DirectMedia Layer (SDL) Version 2.0
 
