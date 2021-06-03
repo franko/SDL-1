@@ -35,7 +35,6 @@
 #else
 #define TEXT_FORMAT XA_STRING
 #endif
-#define MIME_FORMAT X11_XInternAtom(display, "text/plain", False)
 
 /* Get any application owned window handle for clipboard association */
 static Window
@@ -84,10 +83,6 @@ X11_SetClipboardText(_THIS, const char *text)
 
     /* Save the selection on the root window */
     format = TEXT_FORMAT;
-    X11_XChangeProperty(display, DefaultRootWindow(display),
-        X11_GetSDLCutBufferClipboardType(display), format, 8, PropModeReplace,
-        (const unsigned char *)text, SDL_strlen(text));
-    format = MIME_FORMAT;
     X11_XChangeProperty(display, DefaultRootWindow(display),
         X11_GetSDLCutBufferClipboardType(display), format, 8, PropModeReplace,
         (const unsigned char *)text, SDL_strlen(text));
